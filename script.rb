@@ -1,17 +1,6 @@
 # frozen_string_literal: true
 
-# Method that takes a number and returns the number in the fibbonacci sequence.
-def fib(n)
-  if n == 1 || n.zero?
-    n
-  else
-    fib(n - 1) + fib(n - 2)
-  end
-end
-
-fib(7)
-
-# Create a method using iteration that returns an array of the fib sequence when given a numeric value
+# The method below returns an array of the fib sequence up to the given number using an iteration method
 
 def fib_iteration(n, sequence = [])
   until n.negative?
@@ -25,5 +14,13 @@ def fib_iteration(n, sequence = [])
   end
   sequence
 end
-
 fib_iteration(8)
+
+# The method below uses recursion to output the sequence number according to the given index. 
+def fib_rec(n)
+  if n == 1 || n.zero?
+    n
+  else
+    fib_rec(n - 1) + fib_rec(n - 2)
+  end
+end
